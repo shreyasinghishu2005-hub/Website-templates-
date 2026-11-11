@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sure Success Canada — MCCQE1 &amp; NAC‑OSCE Preparation, Mississauga</title>
+<meta name="description" content="Sure Success Canada prepares International Medical Graduates for MCCQE1, NAC‑OSCE, MCCQE2 and USMLE — taught by licensed physicians, in‑person in Mississauga or live online across Canada.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#12283D;
+    --ink-2:#0C1D2B;
+    --paper:#F5F6F1;
+    --paper-2:#ECEEE6;
+    --surgical:#0F6E5C;
+    --surgical-dark:#0A4F41;
+    --gold:#C99A3B;
+    --line:#D9DFD7;
+    --line-dark:#2A4256;
+    --text:#1B2B26;
+    --text-muted:#51625C;
+    --text-on-ink:#EAF0EC;
+    --text-on-ink-muted:#9FB3C4;
+    --radius:2px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--text);
+    font-family:'IBM Plex Sans', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Newsreader', serif;
+    font-weight:500;
+    letter-spacing:-0.01em;
+    margin:0;
+    color:var(--ink);
+  }
+  .mono{
+    font-family:'IBM Plex Mono', monospace;
+    letter-spacing:0.04em;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--surgical);
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:14px;
+    height:1px;
+    background:var(--surgical);
+    display:inline-block;
+  }
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+  @media(max-width:640px){ .wrap{padding:0 20px;} }
+
+  /* ===== Reduced motion ===== */
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important;}
+  }
+
+  /* ===== Nav ===== */
+  header.site{
+    position:sticky; top:0; z-index:50;
+    background:rgba(245,246,241,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .navrow{
+    display:flex; align-items:center; justify-content:space-between;
+    height:76px;
+  }
+  .logo{
+    display:flex; align-items:center; gap:10px;
+    font-family:'Newsreader', serif;
+    font-size:20px;
+    font-weight:600;
+    color:var(--ink);
+    text-decoration:none;
+  }
+  .logo .mark{
+    width:28px; height:28px;
+    border:1.5px solid var(--surgical);
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .logo .mark svg{width:14px;height:14px;}
+  nav.links{
+    display:flex; align-items:center; gap:34px;
+    font-size:14px;
+  }
+  nav.links a{
+    text-decoration:none;
+    color:var(--text);
+    position:relative;
+    padding:4px 0;
+  }
+  nav.links a:hover{color:var(--surgical);}
+  .btn{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:var(--radius);
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    white-space:nowrap;
+    cursor:pointer;
+    border:1px solid transparent;
+  }
+  .btn-primary{ background:var(--surgical); color:#fff; }
+  .btn-primary:hover{ background:var(--surgical-dark); }
+  .btn-ghost{ border-color:var(--ink); color:var(--ink); background:transparent; }
+  .btn-ghost:hover{ background:var(--ink); color:var(--text-on-ink); }
+  .btn-ghost-light{ border-color:rgba(234,240,236,0.4); color:var(--text-on-ink); }
+  .btn-ghost-light:hover{ border-color:#fff; background:rgba(234,240,236,0.08); }
+  .navcta{display:flex; align-items:center; gap:16px;}
+  .navphone{display:flex; align-items:center; gap:8px; font-size:13.5px; font-family:'IBM Plex Mono',monospace;}
+  .burger{display:none; background:none; border:none; cursor:pointer; padding:4px;}
+  .burger span{display:block; width:22px; height:2px; background:var(--ink); margin:5px 0;}
+
+  @media(max-width:900px){
+    nav.links{display:none;}
+    .navphone{display:none;}
+    .burger{display:block;}
+  }
+
+  /* ===== Hero ===== */
+  .hero{
+    background:var(--ink);
+    color:var(--text-on-ink);
+    position:relative;
+    overflow:hidden;
+    border-bottom:1px solid var(--line-dark);
+  }
+  .hero .wrap{
+    padding-top:88px;
+    padding-bottom:56px;
+    position:relative;
+    z-index:2;
+  }
+  .hero h1{
+    color:#fff;
+    font-size:clamp(38px, 5.6vw, 66px);
+    line-height:1.04;
+    max-width:15ch;
+    margin-top:22px;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--gold);
+  }
+  .hero .sub{
+    max-width:52ch;
+    color:var(--text-on-ink-muted);
+    font-size:17px;
+    line-height:1.6;
+    margin-top:22px;
+  }
+  .hero .cta-row{
+    display:flex; gap:14px; margin-top:34px; flex-wrap:wrap;
+  }
+  .vitals{
+    margin-top:56px;
+    border-top:1px solid var(--line-dark);
+    padding-top:0;
+    position:relative;
+  }
+  .ekg-wrap{width:100%; height:64px; position:relative;}
+  .ekg-wrap svg{width:100%; height:100%; display:block;}
+  .ekg-line{
+    fill:none; stroke:var(--surgical); stroke-width:1.6;
+    stroke-linecap:round; stroke-linejoin:round;
+    stroke-dasharray:900;
+    stroke-dashoffset:900;
+    animation:draw 2.6s ease-out forwards, pulse 2.4s ease-in-out 2.6s infinite;
+  }
+  @keyframes draw{ to{ stroke-dashoffset:0; } }
+  @keyframes pulse{
+    0%,100%{ opacity:1;}
+    50%{opacity:0.55;}
+  }
+  .stat-row{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    border-top:1px solid var(--line-dark);
+  }
+  .stat{
+    padding:22px 0 4px;
+    border-right:1px solid var(--line-dark);
+  }
+  .stat:last-child{border-right:none;}
+  .stat .n{
+    font-family:'Newsreader', serif;
+    font-size:32px;
+    color:#fff;
+  }
+  .stat .l{
+    margin-top:6px;
+    font-size:12px;
+    font-family:'IBM Plex Mono',monospace;
+    color:var(--text-on-ink-muted);
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+  }
+  @media(max-width:720px){
+    .stat-row{grid-template-columns:repeat(2,1fr);}
+    .stat:nth-child(2){border-right:none;}
+  }
+
+  /* ===== Section shell ===== */
+  section{padding:96px 0;}
+  section.tight{padding:64px 0;}
+  .section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:40px;
+    margin-bottom:52px;
+    flex-wrap:wrap;
+  }
+  .section-head h2{
+    font-size:clamp(28px,3.4vw,42px);
+    margin-top:14px;
+    max-width:16ch;
+  }
+  .section-head p{
+    max-width:38ch;
+    color:var(--text-muted);
+    line-height:1.6;
+    font-size:15px;
+  }
+
+  /* divider motif: faint pulse line */
+  .pulse-rule{
+    width:100%; height:20px; margin: 0 auto;
+  }
+  .pulse-rule svg{width:100%;height:100%;stroke:var(--line);}
+
+  /* ===== Trust bar ===== */
+  .trust{
+    background:var(--paper-2);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .trust .wrap{
+    padding:26px 32px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    flex-wrap:wrap;
+    text-align:center;
+  }
+  .trust p{
+    margin:0;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12.5px;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    color:var(--text-muted);
+  }
+  .trust strong{color:var(--ink);}
+
+  /* ===== Courses ===== */
+  .course-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  @media(max-width:800px){ .course-grid{grid-template-columns:1fr;} }
+  .course{
+    background:var(--paper);
+    padding:36px 34px;
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    transition:background .2s ease;
+  }
+  .course:hover{background:var(--paper-2);}
+  .course .tag-row{display:flex; align-items:center; justify-content:space-between;}
+  .rx{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    letter-spacing:0.08em;
+    color:var(--surgical);
+    border:1px solid var(--surgical);
+    padding:3px 8px;
+    border-radius:20px;
+  }
+  .course h3{font-size:23px; color:var(--ink);}
+  .course p.desc{color:var(--text-muted); font-size:14.5px; line-height:1.6; margin:0;}
+  .course .meta{
+    display:flex; gap:22px; flex-wrap:wrap;
+    padding-top:12px;
+    border-top:1px dashed var(--line);
+    margin-top:auto;
+  }
+  .course .meta div{font-size:12px; font-family:'IBM Plex Mono',monospace; color:var(--text-muted);}
+  .course .meta div b{display:block; color:var(--ink); font-size:14px; margin-top:2px; font-family:'IBM Plex Sans',sans-serif; font-weight:600;}
+  .course .price{
+    font-family:'Newsreader', serif;
+    font-size:22px;
+    color:var(--ink);
+  }
+  .course .price span{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    color:var(--text-muted);
+    margin-left:6px;
+  }
+
+  /* ===== Format / How it works ===== */
+  .format-section{background:var(--ink); color:var(--text-on-ink);}
+  .format-section .section-head p{color:var(--text-on-ink-muted);}
+  .format-section .section-head h2{color:#fff;}
+  .format-section .eyebrow{color:var(--gold);}
+  .format-section .eyebrow::before{background:var(--gold);}
+  .format-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:44px;
+  }
+  @media(max-width:820px){.format-grid{grid-template-columns:1fr;}}
+  .format-item .idx{
+    font-family:'IBM Plex Mono',monospace;
+    color:var(--gold);
+    font-size:12px;
+    letter-spacing:0.08em;
+  }
+  .format-item h3{
+    color:#fff;
+    font-size:21px;
+    margin-top:10px;
+    font-weight:500;
+  }
+  .format-item p{
+    color:var(--text-on-ink-muted);
+    font-size:14.5px;
+    line-height:1.65;
+    margin-top:10px;
+  }
+  .format-item{border-top:1px solid var(--line-dark); padding-top:24px;}
+
+  /* schedule strip */
+  .schedule{
+    margin-top:64px;
+    border:1px solid var(--line-dark);
+    padding:26px 30px;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:20px;
+  }
+  .schedule .item{font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--text-on-ink-muted);}
+  .schedule .item b{display:block; color:#fff; font-size:15px; font-family:'IBM Plex Sans',sans-serif; margin-bottom:4px; font-weight:500;}
+
+  /* ===== Reviews ===== */
+  .review-strip{
+    display:flex; align-items:center; gap:18px; margin-bottom:52px; flex-wrap:wrap;
+  }
+  .rating-badge{
+    font-family:'Newsreader',serif;
+    font-size:48px;
+    color:var(--ink);
+    line-height:1;
+  }
+  .stars{color:var(--gold); letter-spacing:2px; font-size:16px;}
+  .review-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+  }
+  @media(max-width:900px){.review-grid{grid-template-columns:1fr;}}
+  .review{
+    border:1px solid var(--line);
+    padding:28px;
+    background:var(--paper-2);
+    display:flex; flex-direction:column; gap:16px;
+  }
+  .review .stars{font-size:13px;}
+  .review p{
+    font-family:'Newsreader', serif;
+    font-style:italic;
+    font-size:16.5px;
+    line-height:1.55;
+    color:var(--text);
+    margin:0;
+  }
+  .review .who{
+    display:flex; justify-content:space-between; align-items:center;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;
+    color:var(--text-muted);
+    border-top:1px dashed var(--line);
+    padding-top:14px;
+    text-transform:uppercase;
+    letter-spacing:0.03em;
+  }
+
+  /* ===== CTA ===== */
+  .cta-band{
+    background:var(--surgical);
+    color:#fff;
+    text-align:center;
+  }
+  .cta-band h2{color:#fff; font-size:clamp(28px,4vw,46px); max-width:22ch; margin:0 auto;}
+  .cta-band p{color:rgba(255,255,255,0.85); max-width:44ch; margin:18px auto 0; line-height:1.6;}
+  .cta-band .cta-row{justify-content:center; margin-top:30px;}
+  .cta-band .btn-ghost-light{border-color:rgba(255,255,255,0.5); color:#fff;}
+  .cta-band .btn-ghost-light:hover{background:rgba(255,255,255,0.12); border-color:#fff;}
+  .cta-band .btn-primary{background:#fff; color:var(--surgical-dark);}
+  .cta-band .btn-primary:hover{background:#EFEFE9;}
+
+  /* ===== Footer ===== */
+  footer{background:var(--ink-2); color:var(--text-on-ink-muted); padding:64px 0 32px;}
+  .foot-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr 1fr;
+    gap:40px;
+    padding-bottom:44px;
+    border-bottom:1px solid var(--line-dark);
+  }
+  @media(max-width:800px){ .foot-grid{grid-template-columns:1fr 1fr;} }
+  .foot-grid h4{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:16px;
+    font-weight:400;
+  }
+  .foot-grid ul{list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px;}
+  .foot-grid a{text-decoration:none; font-size:14px; color:var(--text-on-ink-muted);}
+  .foot-grid a:hover{color:#fff;}
+  .foot-brand .logo{color:#fff;}
+  .foot-brand p{font-size:14px; line-height:1.6; margin-top:14px; max-width:32ch; color:var(--text-on-ink-muted);}
+  .foot-bottom{
+    display:flex; justify-content:space-between; padding-top:26px; font-size:12.5px;
+    font-family:'IBM Plex Mono',monospace; flex-wrap:wrap; gap:10px;
+  }
+
+  /* reveal on scroll */
+  .reveal{opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1; transform:none;}
+
+  /* mobile nav panel */
+  .mobile-panel{
+    position:fixed; inset:76px 0 0 0; background:var(--paper);
+    z-index:60; transform:translateX(100%); transition:transform .3s ease;
+    padding:32px; overflow:auto;
+  }
+  .mobile-panel.open{transform:translateX(0);}
+  .mobile-panel a{
+    display:block; padding:16px 0; border-bottom:1px solid var(--line);
+    font-family:'Newsreader',serif; font-size:22px; text-decoration:none; color:var(--ink);
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap navrow">
+    <a href="#top" class="logo">
+      <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#0F6E5C" stroke-width="2"><path d="M2 12h5l2-7 4 14 2-7h7"/></svg></span>
+      Sure Success <span style="color:var(--surgical); font-style:italic;">Canada</span>
+    </a>
+    <nav class="links">
+      <a href="#courses">Courses</a>
+      <a href="#format">How it works</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="navcta">
+      <span class="navphone">📞 +1 888‑341‑9392</span>
+      <a class="btn btn-primary" href="#contact">Book free trial</a>
+    </div>
+    <button class="burger" id="burgerBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-panel" id="mobilePanel">
+  <a href="#courses">Courses</a>
+  <a href="#format">How it works</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contact">Contact</a>
+  <a href="tel:+18883419392">Call +1 888‑341‑9392</a>
+</div>
+
+<main id="top">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap">
+      <div class="eyebrow" style="color:var(--gold);">MCCQE1 · NAC‑OSCE · MCCQE2 · USMLE — Mississauga &amp; Live Online</div>
+      <h1>Your medical degree, <em>licensed to practise</em> in Canada.</h1>
+      <p class="sub">Sure Success Canada has spent over a decade coaching International Medical Graduates through MCCQE1, NAC‑OSCE and MCCQE2 — taught by licensed, practising physicians, in‑person at our Mississauga campus or live via Zoom from anywhere in the world.</p>
+      <div class="cta-row">
+        <a href="#contact" class="btn btn-primary">Reserve your free trial class</a>
+        <a href="#courses" class="btn btn-ghost-light">See course tracks</a>
+      </div>
+
+      <div class="vitals">
+        <div class="ekg-wrap" aria-hidden="true">
+          <svg viewBox="0 0 1000 64" preserveAspectRatio="none">
+            <path class="ekg-line" d="M0,32 L120,32 L145,32 L160,10 L180,54 L200,32 L340,32 L365,32 L385,4 L405,58 L425,32 L560,32 L585,32 L605,14 L625,50 L645,32 L780,32 L805,32 L825,8 L845,56 L865,32 L1000,32"/>
+          </svg>
+        </div>
+        <div class="stat-row">
+          <div class="stat"><div class="n">4.8 / 5</div><div class="l">Google rating · 82 reviews</div></div>
+          <div class="stat"><div class="n">MDs</div><div class="l">Every instructor is a physician</div></div>
+          <div class="stat"><div class="n">EN / FR</div><div class="l">Courses in English &amp; French</div></div>
+          <div class="stat"><div class="n">0$</div><div class="l">Trial class, no obligation</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRUST BAR -->
+  <div class="trust">
+    <div class="wrap">
+      <p>Preparing IMGs for &nbsp;<strong>MCCQE1</strong>&nbsp;·&nbsp;<strong>NAC‑OSCE</strong>&nbsp;·&nbsp;<strong>MCCQE2</strong>&nbsp;·&nbsp;<strong>USMLE 1/2/3</strong>&nbsp;·&nbsp;<strong>CSA</strong>&nbsp;·&nbsp;<strong>IELTS / CLB / TOEFL</strong></p>
+    </div>
+  </div>
+
+  <!-- COURSES -->
+  <section id="courses">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">Course tracks</div>
+          <h2>Every exam on the road to licensure, one program at a time.</h2>
+        </div>
+        <p>No fixed start date — topics rotate on a cycle, so you join whenever you're ready and study alongside candidates at every stage.</p>
+      </div>
+
+      <div class="course-grid reveal">
+        <div class="course">
+          <div class="tag-row"><span class="rx">Rx · Written exam</span></div>
+          <h3>MCCQE1 Preparation</h3>
+          <p class="desc">Internal medicine, paediatrics, obstetrics &amp; gynaecology, psychiatry, surgery, population health, ethics and preventive medicine — built around the 230‑question computer‑based format, with weekly mock tests and the Sure Success Question Bank®.</p>
+          <div class="meta">
+            <div>Format<b>In‑person + Zoom</b></div>
+            <div>Length<b>12 weeks or longer</b></div>
+            <div>Start<b>Rolling enrolment</b></div>
+          </div>
+          <div class="price">$1,999 CAD <span>+ tax · financing available</span></div>
+        </div>
+
+        <div class="course">
+          <div class="tag-row"><span class="rx">Rx · Clinical exam</span></div>
+          <h3>NAC‑OSCE Preparation</h3>
+          <p class="desc">Standardized‑patient stations, communication coaching and exam‑floor strategy, three live classes a week, plus an automatic two‑week crash course in the run‑up to your exam date.</p>
+          <div class="meta">
+            <div>Format<b>In‑person + Zoom</b></div>
+            <div>Length<b>~3 months, ongoing</b></div>
+            <div>Classes<b>Sat / Mon / Wed</b></div>
+          </div>
+          <div class="price">$1,999 CAD <span>· $3,998 with 12‑wk observership</span></div>
+        </div>
+
+        <div class="course">
+          <div class="tag-row"><span class="rx">Rx · Clinical practicum</span></div>
+          <h3>MCCQE2 Preparation</h3>
+          <p class="desc">For candidates who've cleared MCCQE1, NAC and residency requirements — the final clinical‑practice exam before independent licensure, coached with the same standardized‑patient method.</p>
+          <div class="meta">
+            <div>Format<b>In‑person + Zoom</b></div>
+            <div>Audience<b>Post‑residency IMGs</b></div>
+            <div>Start<b>Rolling enrolment</b></div>
+          </div>
+          <div class="price">Contact for pricing <span>· admissions office</span></div>
+        </div>
+
+        <div class="course">
+          <div class="tag-row"><span class="rx">Rx · Français</span></div>
+          <h3>EACMC‑1 &amp; NAC‑OSCE (French)</h3>
+          <p class="desc">Separate French‑language streams of the MCCQE‑1 and NAC‑OSCE preparation courses, for candidates sitting the French‑language versions of the exams.</p>
+          <div class="meta">
+            <div>Format<b>In‑person + Zoom</b></div>
+            <div>Language<b>Français</b></div>
+            <div>Start<b>Rolling enrolment</b></div>
+          </div>
+          <div class="price">Contact for pricing <span>· admissions office</span></div>
+        </div>
+      </div>
+
+      <p style="margin-top:26px; font-size:13.5px; color:var(--text-muted);">Also coaching for USMLE 1, 2 &amp; 3, CSA, and English proficiency exams (IELTS, CLB, TOEFL). Ask our admissions office for the track that fits your pathway.</p>
+    </div>
+  </section>
+
+  <!-- FORMAT -->
+  <section id="format" class="format-section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">How classes run</div>
+          <h2>One live classroom, two ways to sit in it.</h2>
+        </div>
+        <p>Every session is simulcast — the Mississauga campus and the Zoom room share the exact same lecture, at the exact same time.</p>
+      </div>
+
+      <div class="format-grid">
+        <div class="format-item reveal">
+          <div class="idx">On campus</div>
+          <h3>120 Matheson Blvd E</h3>
+          <p>Sit in the room in Mississauga, work standardized‑patient stations face to face, and get breakout‑session attention from a licensed physician instructor.</p>
+        </div>
+        <div class="format-item reveal">
+          <div class="idx">Live online</div>
+          <h3>Zoom, anywhere</h3>
+          <p>Join the identical class from Vancouver, Calgary, Montreal or overseas, with studio‑mic audio and full participation in breakout rooms and mock stations.</p>
+        </div>
+        <div class="format-item reveal">
+          <div class="idx">After class</div>
+          <h3>Recordings &amp; QBank</h3>
+          <p>Every lecture is recorded, and the Sure Success Question Bank® stays open through your course access period for self‑paced review.</p>
+        </div>
+      </div>
+
+      <div class="schedule reveal">
+        <div class="item"><b>Saturday</b>12:30 – 3:30 PM EST · in‑person &amp; Zoom</div>
+        <div class="item"><b>Monday</b>6:00 – 8:00 PM EST · Zoom</div>
+        <div class="item"><b>Wednesday</b>9:00 – 11:00 AM EST · in‑person &amp; Zoom</div>
+        <div class="item"><b>Trial class</b>Free, no obligation — ask us to book yours</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews">
+    <div class="wrap">
+      <div class="review-strip reveal">
+        <div class="rating-badge">4.8</div>
+        <div>
+          <div class="stars">★★★★★</div>
+          <div class="eyebrow" style="margin-top:6px;">82 Google reviews</div>
+        </div>
+      </div>
+
+      <div class="review-grid reveal">
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>"A special thanks to my mentor, whose guidance, clear explanations and constant encouragement carried me through the whole preparation."</p>
+          <div class="who"><span>Cheshta Chugh</span><span>Google review</span></div>
+        </div>
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>"A well‑structured institution for medical exam prep — the faculty is dedicated, knowledgeable, and always willing to help students succeed."</p>
+          <div class="who"><span>Sabeen Riaz</span><span>Google review</span></div>
+        </div>
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>"The team has been genuinely supportive of IMGs navigating the Canadian system, helping map out a pathway that fits each person's background."</p>
+          <div class="who"><span>Dr. Kashif Khan</span><span>Local Guide · Google review</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="tight" style="background:var(--paper-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">Questions</div>
+          <h2>Before you book your trial class</h2>
+        </div>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:36px 48px;" class="reveal">
+        <div>
+          <h3 style="font-size:18px; color:var(--ink); font-weight:600; font-family:'IBM Plex Sans',sans-serif;">Are classes online or in person?</h3>
+          <p style="color:var(--text-muted); font-size:14.5px; line-height:1.6; margin-top:8px;">Every class is simulcast live — attend in person at our Mississauga campus, or join the same session via Zoom from anywhere in Canada or overseas.</p>
+        </div>
+        <div>
+          <h3 style="font-size:18px; color:var(--ink); font-weight:600; font-family:'IBM Plex Sans',sans-serif;">Can I try a class first?</h3>
+          <p style="color:var(--text-muted); font-size:14.5px; line-height:1.6; margin-top:8px;">Yes — we offer a free trial class for MCCQE1 or NAC‑OSCE, with no obligation to enrol afterward.</p>
+        </div>
+        <div>
+          <h3 style="font-size:18px; color:var(--ink); font-weight:600; font-family:'IBM Plex Sans',sans-serif;">Do I need to start on a set date?</h3>
+          <p style="color:var(--text-muted); font-size:14.5px; line-height:1.6; margin-top:8px;">No. Topics rotate continuously, so you can join at any point and keep attending until your exam date.</p>
+        </div>
+        <div>
+          <h3 style="font-size:18px; color:var(--ink); font-weight:600; font-family:'IBM Plex Sans',sans-serif;">Is the MCCQE1 course up to date?</h3>
+          <p style="color:var(--text-muted); font-size:14.5px; line-height:1.6; margin-top:8px;">Yes. Since April 2025 the Clinical Decision Making component is no longer part of the exam, and our materials reflect the current format.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band" id="contact">
+    <div class="wrap reveal">
+      <div class="eyebrow" style="justify-content:center; color:rgba(255,255,255,0.85);"><span style="display:none;"></span></div>
+      <h2>Book your free trial class — no obligation, no pressure.</h2>
+      <p>Call the admissions office, or stop by the Mississauga campus. We'll walk you through which track fits your exam timeline.</p>
+      <div class="cta-row">
+        <a href="tel:+18883419392" class="btn btn-primary">Call +1 888‑341‑9392</a>
+        <a href="https://suresuccess.ca/contact-us" target="_blank" rel="noopener" class="btn btn-ghost-light">Visit suresuccess.ca</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#top" class="logo">
+          <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#C99A3B" stroke-width="2"><path d="M2 12h5l2-7 4 14 2-7h7"/></svg></span>
+          Sure Success Canada
+        </a>
+        <p>Physician‑led exam preparation for International Medical Graduates, in Mississauga and live online across Canada.</p>
+      </div>
+      <div>
+        <h4>Courses</h4>
+        <ul>
+          <li><a href="#courses">MCCQE1 Preparation</a></li>
+          <li><a href="#courses">NAC‑OSCE Preparation</a></li>
+          <li><a href="#courses">MCCQE2 Preparation</a></li>
+          <li><a href="#courses">EACMC‑1 (Français)</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Campus</h4>
+        <ul>
+          <li>120 Matheson Blvd E, Unit 201</li>
+          <li>Mississauga, ON L4Z 1Y6</li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=120+Matheson+Blvd+E+Unit+201+Mississauga+ON" target="_blank" rel="noopener">Get directions →</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <ul>
+          <li class="mono" style="font-size:13px;">Mon · 9:00 AM – 5:00 PM</li>
+          <li class="mono" style="font-size:13px;">Tue / Wed / Thu · 9:00 AM – 9:00 PM</li>
+          <li class="mono" style="font-size:13px;">Fri · 9:00 AM – 5:00 PM</li>
+          <li class="mono" style="font-size:13px;">Sat · 9:00 AM – 3:00 PM</li>
+          <li class="mono" style="font-size:13px;">Sun · Closed</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Sure Success Canada. Independent exam‑preparation coaching, not affiliated with the Medical Council of Canada.</span>
+      <span>+1 888‑341‑9392 · suresuccess.ca</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // mobile nav
+  const burger = document.getElementById('burgerBtn');
+  const panel = document.getElementById('mobilePanel');
+  burger.addEventListener('click', () => panel.classList.toggle('open'));
+  panel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => panel.classList.remove('open')));
+
+  // scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:0.12});
+  revealEls.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
