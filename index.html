@@ -1,791 +1,1243 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sure Success Canada — MCCQE1 &amp; NAC‑OSCE Preparation, Mississauga</title>
-<meta name="description" content="Sure Success Canada prepares International Medical Graduates for MCCQE1, NAC‑OSCE, MCCQE2 and USMLE — taught by licensed physicians, in‑person in Mississauga or live online across Canada.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --ink:#12283D;
-    --ink-2:#0C1D2B;
-    --paper:#F5F6F1;
-    --paper-2:#ECEEE6;
-    --surgical:#0F6E5C;
-    --surgical-dark:#0A4F41;
-    --gold:#C99A3B;
-    --line:#D9DFD7;
-    --line-dark:#2A4256;
-    --text:#1B2B26;
-    --text-muted:#51625C;
-    --text-on-ink:#EAF0EC;
-    --text-on-ink-muted:#9FB3C4;
-    --radius:2px;
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:var(--paper);
-    color:var(--text);
-    font-family:'IBM Plex Sans', sans-serif;
-    -webkit-font-smoothing:antialiased;
-  }
-  h1,h2,h3,.display{
-    font-family:'Newsreader', serif;
-    font-weight:500;
-    letter-spacing:-0.01em;
-    margin:0;
-    color:var(--ink);
-  }
-  .mono{
-    font-family:'IBM Plex Mono', monospace;
-    letter-spacing:0.04em;
-  }
-  .eyebrow{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12px;
-    letter-spacing:0.12em;
-    text-transform:uppercase;
-    color:var(--surgical);
-    display:flex;
-    align-items:center;
-    gap:8px;
-  }
-  .eyebrow::before{
-    content:"";
-    width:14px;
-    height:1px;
-    background:var(--surgical);
-    display:inline-block;
-  }
-  a{color:inherit;}
-  img{max-width:100%;display:block;}
-  .wrap{
-    max-width:1180px;
-    margin:0 auto;
-    padding:0 32px;
-  }
-  @media(max-width:640px){ .wrap{padding:0 20px;} }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cube Systems Portfolio</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #030303;
+        --panel: #0b0c10;
+        --panel-2: #10131a;
+        --text: #f3f7fb;
+        --muted: #8e99aa;
+        --line: rgba(255, 255, 255, 0.12);
+        --cyan: #00f0ff;
+        --magenta: #ff2aa3;
+        --lime: #c7ff4b;
+        --amber: #ffb84d;
+        --danger: #ff4b5c;
+        --shadow: 0 24px 90px rgba(0, 0, 0, 0.42);
+      }
 
-  /* ===== Reduced motion ===== */
-  @media (prefers-reduced-motion: reduce){
-    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important;}
-  }
+      * {
+        box-sizing: border-box;
+      }
 
-  /* ===== Nav ===== */
-  header.site{
-    position:sticky; top:0; z-index:50;
-    background:rgba(245,246,241,0.92);
-    backdrop-filter:blur(8px);
-    border-bottom:1px solid var(--line);
-  }
-  .navrow{
-    display:flex; align-items:center; justify-content:space-between;
-    height:76px;
-  }
-  .logo{
-    display:flex; align-items:center; gap:10px;
-    font-family:'Newsreader', serif;
-    font-size:20px;
-    font-weight:600;
-    color:var(--ink);
-    text-decoration:none;
-  }
-  .logo .mark{
-    width:28px; height:28px;
-    border:1.5px solid var(--surgical);
-    border-radius:50%;
-    display:flex; align-items:center; justify-content:center;
-  }
-  .logo .mark svg{width:14px;height:14px;}
-  nav.links{
-    display:flex; align-items:center; gap:34px;
-    font-size:14px;
-  }
-  nav.links a{
-    text-decoration:none;
-    color:var(--text);
-    position:relative;
-    padding:4px 0;
-  }
-  nav.links a:hover{color:var(--surgical);}
-  .btn{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12.5px;
-    letter-spacing:0.04em;
-    text-transform:uppercase;
-    text-decoration:none;
-    padding:12px 20px;
-    border-radius:var(--radius);
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    white-space:nowrap;
-    cursor:pointer;
-    border:1px solid transparent;
-  }
-  .btn-primary{ background:var(--surgical); color:#fff; }
-  .btn-primary:hover{ background:var(--surgical-dark); }
-  .btn-ghost{ border-color:var(--ink); color:var(--ink); background:transparent; }
-  .btn-ghost:hover{ background:var(--ink); color:var(--text-on-ink); }
-  .btn-ghost-light{ border-color:rgba(234,240,236,0.4); color:var(--text-on-ink); }
-  .btn-ghost-light:hover{ border-color:#fff; background:rgba(234,240,236,0.08); }
-  .navcta{display:flex; align-items:center; gap:16px;}
-  .navphone{display:flex; align-items:center; gap:8px; font-size:13.5px; font-family:'IBM Plex Mono',monospace;}
-  .burger{display:none; background:none; border:none; cursor:pointer; padding:4px;}
-  .burger span{display:block; width:22px; height:2px; background:var(--ink); margin:5px 0;}
+      html {
+        scroll-behavior: smooth;
+      }
 
-  @media(max-width:900px){
-    nav.links{display:none;}
-    .navphone{display:none;}
-    .burger{display:block;}
-  }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        overflow-x: hidden;
+        background:
+          linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+          radial-gradient(circle at 28% 18%, rgba(0, 240, 255, 0.12), transparent 28rem),
+          radial-gradient(circle at 76% 12%, rgba(255, 42, 163, 0.12), transparent 24rem),
+          radial-gradient(circle at 72% 72%, rgba(199, 255, 75, 0.08), transparent 23rem),
+          var(--bg);
+        background-size: 48px 48px, 48px 48px, auto, auto, auto, auto;
+        color: var(--text);
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        letter-spacing: 0;
+      }
 
-  /* ===== Hero ===== */
-  .hero{
-    background:var(--ink);
-    color:var(--text-on-ink);
-    position:relative;
-    overflow:hidden;
-    border-bottom:1px solid var(--line-dark);
-  }
-  .hero .wrap{
-    padding-top:88px;
-    padding-bottom:56px;
-    position:relative;
-    z-index:2;
-  }
-  .hero h1{
-    color:#fff;
-    font-size:clamp(38px, 5.6vw, 66px);
-    line-height:1.04;
-    max-width:15ch;
-    margin-top:22px;
-  }
-  .hero h1 em{
-    font-style:italic;
-    color:var(--gold);
-  }
-  .hero .sub{
-    max-width:52ch;
-    color:var(--text-on-ink-muted);
-    font-size:17px;
-    line-height:1.6;
-    margin-top:22px;
-  }
-  .hero .cta-row{
-    display:flex; gap:14px; margin-top:34px; flex-wrap:wrap;
-  }
-  .vitals{
-    margin-top:56px;
-    border-top:1px solid var(--line-dark);
-    padding-top:0;
-    position:relative;
-  }
-  .ekg-wrap{width:100%; height:64px; position:relative;}
-  .ekg-wrap svg{width:100%; height:100%; display:block;}
-  .ekg-line{
-    fill:none; stroke:var(--surgical); stroke-width:1.6;
-    stroke-linecap:round; stroke-linejoin:round;
-    stroke-dasharray:900;
-    stroke-dashoffset:900;
-    animation:draw 2.6s ease-out forwards, pulse 2.4s ease-in-out 2.6s infinite;
-  }
-  @keyframes draw{ to{ stroke-dashoffset:0; } }
-  @keyframes pulse{
-    0%,100%{ opacity:1;}
-    50%{opacity:0.55;}
-  }
-  .stat-row{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    border-top:1px solid var(--line-dark);
-  }
-  .stat{
-    padding:22px 0 4px;
-    border-right:1px solid var(--line-dark);
-  }
-  .stat:last-child{border-right:none;}
-  .stat .n{
-    font-family:'Newsreader', serif;
-    font-size:32px;
-    color:#fff;
-  }
-  .stat .l{
-    margin-top:6px;
-    font-size:12px;
-    font-family:'IBM Plex Mono',monospace;
-    color:var(--text-on-ink-muted);
-    letter-spacing:0.04em;
-    text-transform:uppercase;
-  }
-  @media(max-width:720px){
-    .stat-row{grid-template-columns:repeat(2,1fr);}
-    .stat:nth-child(2){border-right:none;}
-  }
+      body::before {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        content: "";
+        background:
+          linear-gradient(115deg, transparent 0 41%, rgba(0, 240, 255, 0.08) 42%, transparent 43% 100%),
+          repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.028) 0 1px, transparent 1px 5px);
+        mix-blend-mode: screen;
+      }
 
-  /* ===== Section shell ===== */
-  section{padding:96px 0;}
-  section.tight{padding:64px 0;}
-  .section-head{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-end;
-    gap:40px;
-    margin-bottom:52px;
-    flex-wrap:wrap;
-  }
-  .section-head h2{
-    font-size:clamp(28px,3.4vw,42px);
-    margin-top:14px;
-    max-width:16ch;
-  }
-  .section-head p{
-    max-width:38ch;
-    color:var(--text-muted);
-    line-height:1.6;
-    font-size:15px;
-  }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
 
-  /* divider motif: faint pulse line */
-  .pulse-rule{
-    width:100%; height:20px; margin: 0 auto;
-  }
-  .pulse-rule svg{width:100%;height:100%;stroke:var(--line);}
+      button,
+      a {
+        -webkit-tap-highlight-color: transparent;
+      }
 
-  /* ===== Trust bar ===== */
-  .trust{
-    background:var(--paper-2);
-    border-top:1px solid var(--line);
-    border-bottom:1px solid var(--line);
-  }
-  .trust .wrap{
-    padding:26px 32px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:14px;
-    flex-wrap:wrap;
-    text-align:center;
-  }
-  .trust p{
-    margin:0;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:12.5px;
-    letter-spacing:0.05em;
-    text-transform:uppercase;
-    color:var(--text-muted);
-  }
-  .trust strong{color:var(--ink);}
+      .progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 20;
+        width: 100%;
+        height: 3px;
+        background: rgba(255, 255, 255, 0.06);
+      }
 
-  /* ===== Courses ===== */
-  .course-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:1px;
-    background:var(--line);
-    border:1px solid var(--line);
-  }
-  @media(max-width:800px){ .course-grid{grid-template-columns:1fr;} }
-  .course{
-    background:var(--paper);
-    padding:36px 34px;
-    display:flex;
-    flex-direction:column;
-    gap:16px;
-    transition:background .2s ease;
-  }
-  .course:hover{background:var(--paper-2);}
-  .course .tag-row{display:flex; align-items:center; justify-content:space-between;}
-  .rx{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:11px;
-    letter-spacing:0.08em;
-    color:var(--surgical);
-    border:1px solid var(--surgical);
-    padding:3px 8px;
-    border-radius:20px;
-  }
-  .course h3{font-size:23px; color:var(--ink);}
-  .course p.desc{color:var(--text-muted); font-size:14.5px; line-height:1.6; margin:0;}
-  .course .meta{
-    display:flex; gap:22px; flex-wrap:wrap;
-    padding-top:12px;
-    border-top:1px dashed var(--line);
-    margin-top:auto;
-  }
-  .course .meta div{font-size:12px; font-family:'IBM Plex Mono',monospace; color:var(--text-muted);}
-  .course .meta div b{display:block; color:var(--ink); font-size:14px; margin-top:2px; font-family:'IBM Plex Sans',sans-serif; font-weight:600;}
-  .course .price{
-    font-family:'Newsreader', serif;
-    font-size:22px;
-    color:var(--ink);
-  }
-  .course .price span{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:11px;
-    color:var(--text-muted);
-    margin-left:6px;
-  }
+      .progress__bar {
+        width: 0%;
+        height: 100%;
+        background: linear-gradient(90deg, var(--cyan), var(--magenta), var(--lime));
+        box-shadow: 0 0 22px rgba(0, 240, 255, 0.55);
+      }
 
-  /* ===== Format / How it works ===== */
-  .format-section{background:var(--ink); color:var(--text-on-ink);}
-  .format-section .section-head p{color:var(--text-on-ink-muted);}
-  .format-section .section-head h2{color:#fff;}
-  .format-section .eyebrow{color:var(--gold);}
-  .format-section .eyebrow::before{background:var(--gold);}
-  .format-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:44px;
-  }
-  @media(max-width:820px){.format-grid{grid-template-columns:1fr;}}
-  .format-item .idx{
-    font-family:'IBM Plex Mono',monospace;
-    color:var(--gold);
-    font-size:12px;
-    letter-spacing:0.08em;
-  }
-  .format-item h3{
-    color:#fff;
-    font-size:21px;
-    margin-top:10px;
-    font-weight:500;
-  }
-  .format-item p{
-    color:var(--text-on-ink-muted);
-    font-size:14.5px;
-    line-height:1.65;
-    margin-top:10px;
-  }
-  .format-item{border-top:1px solid var(--line-dark); padding-top:24px;}
+      .cursor {
+        position: fixed;
+        z-index: 50;
+        width: 22px;
+        height: 22px;
+        border: 1px solid rgba(0, 240, 255, 0.82);
+        border-radius: 50%;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        mix-blend-mode: difference;
+        transition:
+          width 180ms ease,
+          height 180ms ease,
+          border-color 180ms ease;
+      }
 
-  /* schedule strip */
-  .schedule{
-    margin-top:64px;
-    border:1px solid var(--line-dark);
-    padding:26px 30px;
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
-    gap:20px;
-  }
-  .schedule .item{font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--text-on-ink-muted);}
-  .schedule .item b{display:block; color:#fff; font-size:15px; font-family:'IBM Plex Sans',sans-serif; margin-bottom:4px; font-weight:500;}
+      .cursor.is-active {
+        width: 42px;
+        height: 42px;
+        border-color: rgba(255, 42, 163, 0.95);
+      }
 
-  /* ===== Reviews ===== */
-  .review-strip{
-    display:flex; align-items:center; gap:18px; margin-bottom:52px; flex-wrap:wrap;
-  }
-  .rating-badge{
-    font-family:'Newsreader',serif;
-    font-size:48px;
-    color:var(--ink);
-    line-height:1;
-  }
-  .stars{color:var(--gold); letter-spacing:2px; font-size:16px;}
-  .review-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:28px;
-  }
-  @media(max-width:900px){.review-grid{grid-template-columns:1fr;}}
-  .review{
-    border:1px solid var(--line);
-    padding:28px;
-    background:var(--paper-2);
-    display:flex; flex-direction:column; gap:16px;
-  }
-  .review .stars{font-size:13px;}
-  .review p{
-    font-family:'Newsreader', serif;
-    font-style:italic;
-    font-size:16.5px;
-    line-height:1.55;
-    color:var(--text);
-    margin:0;
-  }
-  .review .who{
-    display:flex; justify-content:space-between; align-items:center;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:11.5px;
-    color:var(--text-muted);
-    border-top:1px dashed var(--line);
-    padding-top:14px;
-    text-transform:uppercase;
-    letter-spacing:0.03em;
-  }
+      .shell {
+        width: min(1180px, calc(100% - 28px));
+        margin: 0 auto;
+      }
 
-  /* ===== CTA ===== */
-  .cta-band{
-    background:var(--surgical);
-    color:#fff;
-    text-align:center;
-  }
-  .cta-band h2{color:#fff; font-size:clamp(28px,4vw,46px); max-width:22ch; margin:0 auto;}
-  .cta-band p{color:rgba(255,255,255,0.85); max-width:44ch; margin:18px auto 0; line-height:1.6;}
-  .cta-band .cta-row{justify-content:center; margin-top:30px;}
-  .cta-band .btn-ghost-light{border-color:rgba(255,255,255,0.5); color:#fff;}
-  .cta-band .btn-ghost-light:hover{background:rgba(255,255,255,0.12); border-color:#fff;}
-  .cta-band .btn-primary{background:#fff; color:var(--surgical-dark);}
-  .cta-band .btn-primary:hover{background:#EFEFE9;}
+      .nav {
+        position: sticky;
+        top: 3px;
+        z-index: 15;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        min-height: 72px;
+        padding: 12px 0;
+        backdrop-filter: blur(16px);
+      }
 
-  /* ===== Footer ===== */
-  footer{background:var(--ink-2); color:var(--text-on-ink-muted); padding:64px 0 32px;}
-  .foot-grid{
-    display:grid;
-    grid-template-columns:1.4fr 1fr 1fr 1fr;
-    gap:40px;
-    padding-bottom:44px;
-    border-bottom:1px solid var(--line-dark);
-  }
-  @media(max-width:800px){ .foot-grid{grid-template-columns:1fr 1fr;} }
-  .foot-grid h4{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:11.5px;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    color:var(--gold);
-    margin-bottom:16px;
-    font-weight:400;
-  }
-  .foot-grid ul{list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px;}
-  .foot-grid a{text-decoration:none; font-size:14px; color:var(--text-on-ink-muted);}
-  .foot-grid a:hover{color:#fff;}
-  .foot-brand .logo{color:#fff;}
-  .foot-brand p{font-size:14px; line-height:1.6; margin-top:14px; max-width:32ch; color:var(--text-on-ink-muted);}
-  .foot-bottom{
-    display:flex; justify-content:space-between; padding-top:26px; font-size:12.5px;
-    font-family:'IBM Plex Mono',monospace; flex-wrap:wrap; gap:10px;
-  }
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        min-width: 154px;
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+        font-size: 13px;
+        text-transform: uppercase;
+      }
 
-  /* reveal on scroll */
-  .reveal{opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease;}
-  .reveal.in{opacity:1; transform:none;}
+      .brand__mark {
+        position: relative;
+        display: inline-grid;
+        place-items: center;
+        width: 34px;
+        aspect-ratio: 1;
+        border: 1px solid var(--line);
+        background: linear-gradient(135deg, rgba(0, 240, 255, 0.2), rgba(255, 42, 163, 0.16));
+        box-shadow: inset 0 0 24px rgba(255, 255, 255, 0.08);
+      }
 
-  /* mobile nav panel */
-  .mobile-panel{
-    position:fixed; inset:76px 0 0 0; background:var(--paper);
-    z-index:60; transform:translateX(100%); transition:transform .3s ease;
-    padding:32px; overflow:auto;
-  }
-  .mobile-panel.open{transform:translateX(0);}
-  .mobile-panel a{
-    display:block; padding:16px 0; border-bottom:1px solid var(--line);
-    font-family:'Newsreader',serif; font-size:22px; text-decoration:none; color:var(--ink);
-  }
-</style>
-</head>
-<body>
+      .brand__mark::before,
+      .brand__mark::after {
+        position: absolute;
+        inset: 8px;
+        content: "";
+        border: 1px solid rgba(255, 255, 255, 0.52);
+        transform: rotate(45deg);
+      }
 
-<header class="site">
-  <div class="wrap navrow">
-    <a href="#top" class="logo">
-      <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#0F6E5C" stroke-width="2"><path d="M2 12h5l2-7 4 14 2-7h7"/></svg></span>
-      Sure Success <span style="color:var(--surgical); font-style:italic;">Canada</span>
-    </a>
-    <nav class="links">
-      <a href="#courses">Courses</a>
-      <a href="#format">How it works</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="navcta">
-      <span class="navphone">📞 +1 888‑341‑9392</span>
-      <a class="btn btn-primary" href="#contact">Book free trial</a>
-    </div>
-    <button class="burger" id="burgerBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
-  </div>
-</header>
+      .brand__mark::after {
+        inset: 12px;
+        border-color: var(--lime);
+      }
 
-<div class="mobile-panel" id="mobilePanel">
-  <a href="#courses">Courses</a>
-  <a href="#format">How it works</a>
-  <a href="#reviews">Reviews</a>
-  <a href="#faq">FAQ</a>
-  <a href="#contact">Contact</a>
-  <a href="tel:+18883419392">Call +1 888‑341‑9392</a>
-</div>
+      .nav__links {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 5px;
+        border: 1px solid var(--line);
+        background: rgba(3, 3, 3, 0.56);
+      }
 
-<main id="top">
+      .nav__links a {
+        min-width: 68px;
+        padding: 10px 12px;
+        color: var(--muted);
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+        font-size: 12px;
+        text-align: center;
+        text-transform: uppercase;
+        transition:
+          color 180ms ease,
+          background 180ms ease;
+      }
 
-  <!-- HERO -->
-  <div class="hero">
-    <div class="wrap">
-      <div class="eyebrow" style="color:var(--gold);">MCCQE1 · NAC‑OSCE · MCCQE2 · USMLE — Mississauga &amp; Live Online</div>
-      <h1>Your medical degree, <em>licensed to practise</em> in Canada.</h1>
-      <p class="sub">Sure Success Canada has spent over a decade coaching International Medical Graduates through MCCQE1, NAC‑OSCE and MCCQE2 — taught by licensed, practising physicians, in‑person at our Mississauga campus or live via Zoom from anywhere in the world.</p>
-      <div class="cta-row">
-        <a href="#contact" class="btn btn-primary">Reserve your free trial class</a>
-        <a href="#courses" class="btn btn-ghost-light">See course tracks</a>
-      </div>
+      .nav__links a:hover {
+        color: var(--text);
+        background: rgba(255, 255, 255, 0.07);
+      }
 
-      <div class="vitals">
-        <div class="ekg-wrap" aria-hidden="true">
-          <svg viewBox="0 0 1000 64" preserveAspectRatio="none">
-            <path class="ekg-line" d="M0,32 L120,32 L145,32 L160,10 L180,54 L200,32 L340,32 L365,32 L385,4 L405,58 L425,32 L560,32 L585,32 L605,14 L625,50 L645,32 L780,32 L805,32 L825,8 L845,56 L865,32 L1000,32"/>
-          </svg>
-        </div>
-        <div class="stat-row">
-          <div class="stat"><div class="n">4.8 / 5</div><div class="l">Google rating · 82 reviews</div></div>
-          <div class="stat"><div class="n">MDs</div><div class="l">Every instructor is a physician</div></div>
-          <div class="stat"><div class="n">EN / FR</div><div class="l">Courses in English &amp; French</div></div>
-          <div class="stat"><div class="n">0$</div><div class="l">Trial class, no obligation</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
+      .nav__cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 132px;
+        min-height: 42px;
+        padding: 10px 16px;
+        border: 1px solid rgba(0, 240, 255, 0.45);
+        background: rgba(0, 240, 255, 0.08);
+        color: var(--cyan);
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+        font-size: 12px;
+        text-transform: uppercase;
+      }
 
-  <!-- TRUST BAR -->
-  <div class="trust">
-    <div class="wrap">
-      <p>Preparing IMGs for &nbsp;<strong>MCCQE1</strong>&nbsp;·&nbsp;<strong>NAC‑OSCE</strong>&nbsp;·&nbsp;<strong>MCCQE2</strong>&nbsp;·&nbsp;<strong>USMLE 1/2/3</strong>&nbsp;·&nbsp;<strong>CSA</strong>&nbsp;·&nbsp;<strong>IELTS / CLB / TOEFL</strong></p>
-    </div>
-  </div>
+      .hero {
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+        gap: clamp(28px, 5vw, 72px);
+        min-height: calc(100vh - 76px);
+        align-items: center;
+        padding: clamp(28px, 6vw, 70px) 0 46px;
+      }
 
-  <!-- COURSES -->
-  <section id="courses">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div>
-          <div class="eyebrow">Course tracks</div>
-          <h2>Every exam on the road to licensure, one program at a time.</h2>
-        </div>
-        <p>No fixed start date — topics rotate on a cycle, so you join whenever you're ready and study alongside candidates at every stage.</p>
-      </div>
+      .hero::after {
+        position: absolute;
+        right: min(8vw, 72px);
+        bottom: 18px;
+        width: 170px;
+        height: 1px;
+        content: "";
+        background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+      }
 
-      <div class="course-grid reveal">
-        <div class="course">
-          <div class="tag-row"><span class="rx">Rx · Written exam</span></div>
-          <h3>MCCQE1 Preparation</h3>
-          <p class="desc">Internal medicine, paediatrics, obstetrics &amp; gynaecology, psychiatry, surgery, population health, ethics and preventive medicine — built around the 230‑question computer‑based format, with weekly mock tests and the Sure Success Question Bank®.</p>
-          <div class="meta">
-            <div>Format<b>In‑person + Zoom</b></div>
-            <div>Length<b>12 weeks or longer</b></div>
-            <div>Start<b>Rolling enrolment</b></div>
+      .eyebrow,
+      .section__kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--lime);
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before,
+      .section__kicker::before {
+        width: 36px;
+        height: 1px;
+        content: "";
+        background: currentColor;
+      }
+
+      .hero h1 {
+        max-width: 790px;
+        margin: 18px 0 22px;
+        font-size: clamp(48px, 8.6vw, 128px);
+        font-weight: 800;
+        line-height: 0.88;
+        text-transform: uppercase;
+      }
+
+      .glitch {
+        position: relative;
+        display: inline-block;
+        text-shadow:
+          3px 0 var(--magenta),
+          -3px 0 var(--cyan);
+        animation: chroma 4s steps(2, end) infinite;
+      }
+
+      @keyframes chroma {
+        0%,
+        90%,
+        100% {
+          text-shadow:
+            3px 0 var(--magenta),
+            -3px 0 var(--cyan);
+        }
+        92% {
+          text-shadow:
+            9px 0 var(--cyan),
+            -6px 0 var(--magenta);
+        }
+        94% {
+          text-shadow:
+            -7px 0 var(--lime),
+            4px 0 var(--danger);
+        }
+      }
+
+      .hero__copy {
+        max-width: 620px;
+        margin: 0;
+        color: #bac4d1;
+        font-size: clamp(18px, 2vw, 24px);
+        line-height: 1.46;
+      }
+
+      .hero__actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 34px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-height: 48px;
+        padding: 13px 18px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--text);
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+        font-size: 12px;
+        text-transform: uppercase;
+        transition:
+          transform 180ms ease,
+          border-color 180ms ease,
+          background 180ms ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+        border-color: rgba(0, 240, 255, 0.7);
+        background: rgba(0, 240, 255, 0.1);
+      }
+
+      .btn--primary {
+        border-color: rgba(255, 42, 163, 0.58);
+        background: linear-gradient(135deg, rgba(255, 42, 163, 0.18), rgba(0, 240, 255, 0.12));
+      }
+
+      .btn__icon {
+        display: inline-grid;
+        place-items: center;
+        width: 18px;
+        aspect-ratio: 1;
+        color: var(--lime);
+      }
+
+      .hero__visual {
+        position: relative;
+        min-height: 560px;
+      }
+
+      .visual-frame {
+        position: absolute;
+        inset: 50% auto auto 50%;
+        width: min(100%, 520px);
+        aspect-ratio: 1;
+        transform: translate(-50%, -50%);
+      }
+
+      .visual-frame::before,
+      .visual-frame::after {
+        position: absolute;
+        inset: 28px;
+        content: "";
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        transform: rotate(8deg);
+      }
+
+      .visual-frame::after {
+        inset: 60px;
+        border-color: rgba(0, 240, 255, 0.22);
+        transform: rotate(-16deg);
+      }
+
+      .cube-orbit {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        filter: drop-shadow(0 0 28px rgba(255, 42, 163, 0.22)) drop-shadow(0 0 42px rgba(0, 240, 255, 0.18));
+        animation: float 6.5s ease-in-out infinite;
+      }
+
+      .cube-gif {
+        width: min(96%, 470px);
+        height: auto;
+        object-fit: contain;
+        mix-blend-mode: screen;
+      }
+
+      .cube-fallback {
+        display: none;
+        width: min(74%, 360px);
+        aspect-ratio: 1;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        background:
+          linear-gradient(135deg, rgba(255, 42, 163, 0.82), transparent 36%),
+          linear-gradient(225deg, rgba(0, 240, 255, 0.78), transparent 32%),
+          linear-gradient(315deg, rgba(199, 255, 75, 0.8), transparent 28%),
+          #0a0c11;
+        box-shadow:
+          18px 18px 0 rgba(0, 240, 255, 0.22),
+          -18px -10px 0 rgba(255, 42, 163, 0.2),
+          inset 0 0 80px rgba(255, 255, 255, 0.16);
+        transform: rotate3d(1, 1, 0, 58deg) rotate(35deg);
+      }
+
+      .cube-orbit.is-missing .cube-gif {
+        display: none;
+      }
+
+      .cube-orbit.is-missing .cube-fallback {
+        display: block;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translate3d(0, 0, 0) rotate(0deg);
+        }
+        50% {
+          transform: translate3d(0, -22px, 0) rotate(1.4deg);
+        }
+      }
+
+      .signal-panel {
+        position: absolute;
+        right: 0;
+        bottom: 34px;
+        width: min(310px, 78%);
+        padding: 14px;
+        border: 1px solid var(--line);
+        background: rgba(4, 6, 10, 0.76);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(14px);
+      }
+
+      .signal-panel__top {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 14px;
+        color: var(--muted);
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+        font-size: 11px;
+        text-transform: uppercase;
+      }
+
+      .signal-bars {
+        display: grid;
+        grid-template-columns: repeat(22, 1fr);
+        align-items: end;
+        gap: 4px;
+        height: 70px;
+      }
+
+      .signal-bars span {
+        display: block;
+        min-height: 8px;
+        background: linear-gradient(180deg, var(--cyan), var(--magenta));
+        transform-origin: bottom;
+        animation: wave 1100ms ease-in-out infinite;
+      }
+
+      .signal-bars span:nth-child(3n) {
+        background: linear-gradient(180deg, var(--lime), var(--cyan));
+        animation-duration: 1450ms;
+      }
+
+      .signal-bars span:nth-child(4n) {
+        background: linear-gradient(180deg, var(--amber), var(--magenta));
+        animation-duration: 820ms;
+      }
+
+      @keyframes wave {
+        0%,
+        100% {
+          transform: scaleY(0.28);
+        }
+        50% {
+          transform: scaleY(1);
+        }
+      }
+
+      .metrics {
+        position: fixed;
+        right: 14px;
+        bottom: 14px;
+        z-index: 12;
+        display: grid;
+        gap: 5px;
+        min-width: 152px;
+        padding: 10px 12px;
+        border: 1px solid var(--line);
+        background: rgba(3, 3, 3, 0.72);
+        color: var(--muted);
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+        font-size: 11px;
+        backdrop-filter: blur(12px);
+      }
+
+      .metrics strong {
+        color: var(--text);
+        font-weight: 500;
+      }
+
+      .ticker {
+        overflow: hidden;
+        border-block: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.035);
+      }
+
+      .ticker__track {
+        display: flex;
+        width: max-content;
+        animation: marquee 27s linear infinite;
+      }
+
+      .ticker__item {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        min-height: 52px;
+        padding: 0 28px;
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+        font-size: 13px;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+
+      .ticker__item b {
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      .ticker__item span {
+        color: var(--lime);
+      }
+
+      .ticker__item:nth-child(4n) span,
+      .ticker__item:nth-child(7n) span {
+        color: var(--danger);
+      }
+
+      @keyframes marquee {
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      section {
+        padding: clamp(64px, 9vw, 112px) 0;
+      }
+
+      .section__head {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 20px;
+        margin-bottom: 34px;
+      }
+
+      .section__title {
+        max-width: 820px;
+        margin: 10px 0 0;
+        font-size: clamp(34px, 5vw, 74px);
+        line-height: 0.98;
+        text-transform: uppercase;
+      }
+
+      .section__meta {
+        max-width: 290px;
+        margin: 0;
+        color: var(--muted);
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+        font-size: 12px;
+        line-height: 1.55;
+        text-transform: uppercase;
+      }
+
+      .case-grid {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .case {
+        position: relative;
+        min-height: 330px;
+        overflow: hidden;
+        padding: 18px;
+        border: 1px solid var(--line);
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.025)),
+          var(--panel);
+        box-shadow: 0 20px 70px rgba(0, 0, 0, 0.24);
+      }
+
+      .case:nth-child(1),
+      .case:nth-child(4) {
+        grid-column: span 3;
+      }
+
+      .case:nth-child(2),
+      .case:nth-child(3),
+      .case:nth-child(5),
+      .case:nth-child(6) {
+        grid-column: span 3;
+      }
+
+      .case::before {
+        position: absolute;
+        inset: -1px;
+        content: "";
+        background:
+          linear-gradient(115deg, rgba(0, 240, 255, 0.18), transparent 42%),
+          linear-gradient(250deg, rgba(255, 42, 163, 0.18), transparent 36%);
+        opacity: 0;
+        transition: opacity 180ms ease;
+      }
+
+      .case:hover::before {
+        opacity: 1;
+      }
+
+      .case > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      .case__visual {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 6px;
+        height: 152px;
+        margin-bottom: 28px;
+      }
+
+      .case__visual span {
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.045);
+      }
+
+      .case__visual span:nth-child(2n) {
+        background: rgba(0, 240, 255, 0.13);
+      }
+
+      .case__visual span:nth-child(5n) {
+        background: rgba(255, 42, 163, 0.18);
+      }
+
+      .case__visual span:nth-child(9n) {
+        background: rgba(199, 255, 75, 0.15);
+      }
+
+      .case__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 18px;
+      }
+
+      .tag {
+        padding: 6px 8px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        color: var(--muted);
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+        font-size: 11px;
+        text-transform: uppercase;
+      }
+
+      .case h3 {
+        margin: 0 0 10px;
+        font-size: clamp(24px, 3vw, 38px);
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .case p {
+        max-width: 560px;
+        margin: 0;
+        color: #aab5c5;
+        line-height: 1.55;
+      }
+
+      .matrix {
+        display: grid;
+        grid-template-columns: 0.92fr 1.08fr;
+        gap: 12px;
+      }
+
+      .timeline,
+      .skills {
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.035);
+      }
+
+      .timeline__row {
+        display: grid;
+        grid-template-columns: minmax(96px, 0.28fr) minmax(0, 1fr);
+        gap: 18px;
+        padding: 22px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .timeline__row:last-child {
+        border-bottom: 0;
+      }
+
+      .timeline__date {
+        color: var(--cyan);
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+
+      .timeline h3,
+      .skill h3 {
+        margin: 0 0 8px;
+        font-size: 20px;
+        text-transform: uppercase;
+      }
+
+      .timeline p,
+      .skill p {
+        margin: 0;
+        color: #aab5c5;
+        line-height: 1.55;
+      }
+
+      .skills {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .skill {
+        min-height: 180px;
+        padding: 22px;
+        border-right: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .skill:nth-child(2n) {
+        border-right: 0;
+      }
+
+      .skill:nth-last-child(-n + 2) {
+        border-bottom: 0;
+      }
+
+      .skill__num {
+        display: block;
+        margin-bottom: 38px;
+        color: var(--lime);
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+        font-size: 12px;
+      }
+
+      .contact {
+        padding-bottom: 34px;
+      }
+
+      .contact__band {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 24px;
+        padding: clamp(24px, 5vw, 46px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        background:
+          linear-gradient(120deg, rgba(0, 240, 255, 0.14), transparent 38%),
+          linear-gradient(260deg, rgba(255, 42, 163, 0.16), transparent 44%),
+          rgba(255, 255, 255, 0.04);
+      }
+
+      .contact h2 {
+        margin: 0;
+        font-size: clamp(36px, 6vw, 88px);
+        line-height: 0.95;
+        text-transform: uppercase;
+      }
+
+      .contact p {
+        max-width: 540px;
+        margin: 14px 0 0;
+        color: #aab5c5;
+        line-height: 1.55;
+      }
+
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 24px 0 34px;
+        color: var(--muted);
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+        font-size: 11px;
+        text-transform: uppercase;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(26px);
+        transition:
+          opacity 520ms ease,
+          transform 520ms ease;
+      }
+
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 900px) {
+        .nav {
+          position: relative;
+          flex-wrap: wrap;
+          min-height: auto;
+        }
+
+        .brand,
+        .nav__cta {
+          min-width: auto;
+        }
+
+        .nav__links {
+          order: 3;
+          width: 100%;
+          overflow-x: auto;
+          justify-content: flex-start;
+        }
+
+        .nav__links a {
+          min-width: 92px;
+        }
+
+        .hero {
+          grid-template-columns: 1fr;
+          min-height: auto;
+          padding-top: 34px;
+        }
+
+        .hero__visual {
+          min-height: 430px;
+        }
+
+        .signal-panel {
+          right: 4px;
+          bottom: 0;
+          width: min(300px, 88%);
+        }
+
+        .section__head,
+        .matrix,
+        .contact__band {
+          grid-template-columns: 1fr;
+        }
+
+        .section__head,
+        .footer {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .case-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .case:nth-child(n) {
+          grid-column: auto;
+        }
+      }
+
+      @media (max-width: 620px) {
+        .shell {
+          width: min(100% - 18px, 1180px);
+        }
+
+        .cursor,
+        .metrics {
+          display: none;
+        }
+
+        .nav__cta {
+          width: 100%;
+        }
+
+        .hero h1 {
+          font-size: clamp(44px, 18vw, 76px);
+        }
+
+        .hero__actions .btn {
+          width: 100%;
+        }
+
+        .hero__visual {
+          min-height: 360px;
+        }
+
+        .visual-frame {
+          width: min(100%, 360px);
+        }
+
+        .signal-panel {
+          position: relative;
+          width: 100%;
+          margin-top: 300px;
+        }
+
+        .case {
+          min-height: 300px;
+          padding: 14px;
+        }
+
+        .case__visual {
+          height: 128px;
+        }
+
+        .timeline__row,
+        .skills {
+          grid-template-columns: 1fr;
+        }
+
+        .skill,
+        .skill:nth-child(2n),
+        .skill:nth-last-child(-n + 2) {
+          border-right: 0;
+          border-bottom: 1px solid var(--line);
+        }
+
+        .skill:last-child {
+          border-bottom: 0;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          animation-duration: 1ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 1ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="progress" aria-hidden="true"><div class="progress__bar" id="progressBar"></div></div>
+    <div class="cursor" id="cursor" aria-hidden="true"></div>
+
+    <header class="shell nav">
+      <a class="brand" href="#top" aria-label="Cube systems home">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span>Cube//Systems</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary navigation">
+        <a href="#work">Work</a>
+        <a href="#stack">Stack</a>
+        <a href="#signal">Signal</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="nav__cta" href="mailto:hello@example.com">Start Project</a>
+    </header>
+
+    <main id="top">
+      <section class="shell hero">
+        <div class="hero__content reveal">
+          <span class="eyebrow">Product, motion, systems</span>
+          <h1>Interfaces for <span class="glitch">high signal</span> digital products</h1>
+          <p class="hero__copy">
+            A sharp portfolio concept for fintech dashboards, crypto tools, AI products and visual systems
+            that need clarity, energy and a strong first impression.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#work">
+              <span class="btn__icon" aria-hidden="true">-&gt;</span>
+              View Cases
+            </a>
+            <a class="btn" href="#contact">
+              <span class="btn__icon" aria-hidden="true">+</span>
+              Contact
+            </a>
           </div>
-          <div class="price">$1,999 CAD <span>+ tax · financing available</span></div>
         </div>
 
-        <div class="course">
-          <div class="tag-row"><span class="rx">Rx · Clinical exam</span></div>
-          <h3>NAC‑OSCE Preparation</h3>
-          <p class="desc">Standardized‑patient stations, communication coaching and exam‑floor strategy, three live classes a week, plus an automatic two‑week crash course in the run‑up to your exam date.</p>
-          <div class="meta">
-            <div>Format<b>In‑person + Zoom</b></div>
-            <div>Length<b>~3 months, ongoing</b></div>
-            <div>Classes<b>Sat / Mon / Wed</b></div>
+        <div class="hero__visual reveal" id="signal">
+          <div class="visual-frame" aria-hidden="true">
+            <div class="cube-orbit" id="cubeOrbit">
+              <img
+                class="cube-gif"
+                src="file:///Users/chinmaybhatt/Downloads/cubeAnimation.gif"
+                alt="Animated neon cube"
+                onerror="document.getElementById('cubeOrbit').classList.add('is-missing')"
+              />
+              <div class="cube-fallback" aria-hidden="true"></div>
+            </div>
           </div>
-          <div class="price">$1,999 CAD <span>· $3,998 with 12‑wk observership</span></div>
+          <aside class="signal-panel" aria-label="Signal analyzer">
+            <div class="signal-panel__top">
+              <span>Audio Wave</span>
+              <span id="clock">00:00:00</span>
+            </div>
+            <div class="signal-bars" aria-hidden="true">
+              <span style="height: 22%"></span>
+              <span style="height: 62%"></span>
+              <span style="height: 38%"></span>
+              <span style="height: 88%"></span>
+              <span style="height: 46%"></span>
+              <span style="height: 74%"></span>
+              <span style="height: 28%"></span>
+              <span style="height: 94%"></span>
+              <span style="height: 56%"></span>
+              <span style="height: 42%"></span>
+              <span style="height: 76%"></span>
+              <span style="height: 36%"></span>
+              <span style="height: 82%"></span>
+              <span style="height: 30%"></span>
+              <span style="height: 66%"></span>
+              <span style="height: 48%"></span>
+              <span style="height: 90%"></span>
+              <span style="height: 34%"></span>
+              <span style="height: 70%"></span>
+              <span style="height: 52%"></span>
+              <span style="height: 84%"></span>
+              <span style="height: 40%"></span>
+            </div>
+          </aside>
         </div>
+      </section>
 
-        <div class="course">
-          <div class="tag-row"><span class="rx">Rx · Clinical practicum</span></div>
-          <h3>MCCQE2 Preparation</h3>
-          <p class="desc">For candidates who've cleared MCCQE1, NAC and residency requirements — the final clinical‑practice exam before independent licensure, coached with the same standardized‑patient method.</p>
-          <div class="meta">
-            <div>Format<b>In‑person + Zoom</b></div>
-            <div>Audience<b>Post‑residency IMGs</b></div>
-            <div>Start<b>Rolling enrolment</b></div>
+      <div class="ticker" aria-label="Market ticker">
+        <div class="ticker__track">
+          <div class="ticker__item"><b>BTC</b> 71 717 <span>+0.33%</span></div>
+          <div class="ticker__item"><b>ETH</b> 3 812 <span>+1.24%</span></div>
+          <div class="ticker__item"><b>NASDAQ</b> 19 246 <span>+0.18%</span></div>
+          <div class="ticker__item"><b>RISK</b> 42.9 <span>-0.71%</span></div>
+          <div class="ticker__item"><b>USDT</b> 1.00 <span>+0.01%</span></div>
+          <div class="ticker__item"><b>SIGNAL</b> 98.4 <span>+4.20%</span></div>
+          <div class="ticker__item"><b>LATENCY</b> 12ms <span>-2.18%</span></div>
+          <div class="ticker__item"><b>BTC</b> 71 717 <span>+0.33%</span></div>
+          <div class="ticker__item"><b>ETH</b> 3 812 <span>+1.24%</span></div>
+          <div class="ticker__item"><b>NASDAQ</b> 19 246 <span>+0.18%</span></div>
+          <div class="ticker__item"><b>RISK</b> 42.9 <span>-0.71%</span></div>
+          <div class="ticker__item"><b>USDT</b> 1.00 <span>+0.01%</span></div>
+          <div class="ticker__item"><b>SIGNAL</b> 98.4 <span>+4.20%</span></div>
+          <div class="ticker__item"><b>LATENCY</b> 12ms <span>-2.18%</span></div>
+        </div>
+      </div>
+
+      <section class="shell" id="work">
+        <div class="section__head reveal">
+          <div>
+            <span class="section__kicker">Selected cases</span>
+            <h2 class="section__title">Digital products with data-rich interfaces</h2>
           </div>
-          <div class="price">Contact for pricing <span>· admissions office</span></div>
+          <p class="section__meta">Fintech, trading, automation, dashboards, design systems and motion direction.</p>
         </div>
 
-        <div class="course">
-          <div class="tag-row"><span class="rx">Rx · Français</span></div>
-          <h3>EACMC‑1 &amp; NAC‑OSCE (French)</h3>
-          <p class="desc">Separate French‑language streams of the MCCQE‑1 and NAC‑OSCE preparation courses, for candidates sitting the French‑language versions of the exams.</p>
-          <div class="meta">
-            <div>Format<b>In‑person + Zoom</b></div>
-            <div>Language<b>Français</b></div>
-            <div>Start<b>Rolling enrolment</b></div>
+        <div class="case-grid">
+          <article class="case reveal">
+            <div class="case__visual" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="case__tags"><span class="tag">UI</span><span class="tag">Design System</span><span class="tag">React</span></div>
+            <h3>Trading Terminal</h3>
+            <p>Dense market data, watchlists, position controls and alerts arranged for fast scanning.</p>
+          </article>
+
+          <article class="case reveal">
+            <div class="case__visual" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="case__tags"><span class="tag">Crypto</span><span class="tag">Mobile</span><span class="tag">KYC</span></div>
+            <h3>Wallet Flow</h3>
+            <p>Crypto onboarding, portfolio cards, risk prompts and transfers shaped into one clean flow.</p>
+          </article>
+
+          <article class="case reveal">
+            <div class="case__visual" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="case__tags"><span class="tag">AI</span><span class="tag">Ops</span><span class="tag">Control</span></div>
+            <h3>Signal Console</h3>
+            <p>Operational workspace for model runs, human review, queue state and audit trails.</p>
+          </article>
+
+          <article class="case reveal">
+            <div class="case__visual" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="case__tags"><span class="tag">Brand</span><span class="tag">Motion</span><span class="tag">Web</span></div>
+            <h3>Launch Site</h3>
+            <p>A bold conversion page with animated product signals, sharp content hierarchy and responsive sections.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="shell" id="stack">
+        <div class="section__head reveal">
+          <div>
+            <span class="section__kicker">System stack</span>
+            <h2 class="section__title">Strategy, interface design and front-end motion</h2>
           </div>
-          <div class="price">Contact for pricing <span>· admissions office</span></div>
+          <p class="section__meta">Built for teams who need the first screen to feel premium and the product surface to stay usable.</p>
         </div>
-      </div>
 
-      <p style="margin-top:26px; font-size:13.5px; color:var(--text-muted);">Also coaching for USMLE 1, 2 &amp; 3, CSA, and English proficiency exams (IELTS, CLB, TOEFL). Ask our admissions office for the track that fits your pathway.</p>
-    </div>
-  </section>
+        <div class="matrix">
+          <div class="timeline reveal">
+            <div class="timeline__row">
+              <span class="timeline__date">01 / Research</span>
+              <div>
+                <h3>Product Mapping</h3>
+                <p>Flows, user states, decision points and data density mapped before UI production.</p>
+              </div>
+            </div>
+            <div class="timeline__row">
+              <span class="timeline__date">02 / Design</span>
+              <div>
+                <h3>Interface System</h3>
+                <p>Reusable components, dark-mode contrast, chart surfaces, forms and motion states.</p>
+              </div>
+            </div>
+            <div class="timeline__row">
+              <span class="timeline__date">03 / Build</span>
+              <div>
+                <h3>Frontend Prototype</h3>
+                <p>Responsive HTML, CSS and JavaScript prototypes that make the product direction tangible.</p>
+              </div>
+            </div>
+          </div>
 
-  <!-- FORMAT -->
-  <section id="format" class="format-section">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div>
-          <div class="eyebrow">How classes run</div>
-          <h2>One live classroom, two ways to sit in it.</h2>
+          <div class="skills reveal">
+            <article class="skill">
+              <span class="skill__num">001</span>
+              <h3>Data UI</h3>
+              <p>Dashboards, tables, filters, panels and live status systems.</p>
+            </article>
+            <article class="skill">
+              <span class="skill__num">002</span>
+              <h3>Motion</h3>
+              <p>Micro interactions, scrolling rhythm, hero animation and page transitions.</p>
+            </article>
+            <article class="skill">
+              <span class="skill__num">003</span>
+              <h3>Brand Web</h3>
+              <p>Launch pages, portfolios and product websites with a clear visual signature.</p>
+            </article>
+            <article class="skill">
+              <span class="skill__num">004</span>
+              <h3>Systems</h3>
+              <p>Component rules, tokens, responsive behavior and developer-ready structure.</p>
+            </article>
+          </div>
         </div>
-        <p>Every session is simulcast — the Mississauga campus and the Zoom room share the exact same lecture, at the exact same time.</p>
-      </div>
+      </section>
 
-      <div class="format-grid">
-        <div class="format-item reveal">
-          <div class="idx">On campus</div>
-          <h3>120 Matheson Blvd E</h3>
-          <p>Sit in the room in Mississauga, work standardized‑patient stations face to face, and get breakout‑session attention from a licensed physician instructor.</p>
+      <section class="shell contact" id="contact">
+        <div class="contact__band reveal">
+          <div>
+            <h2>Build the next interface</h2>
+            <p>Bring the product idea, the dashboard problem or the visual direction. The result should look sharp and work clearly.</p>
+          </div>
+          <a class="btn btn--primary" href="mailto:hello@example.com">
+            <span class="btn__icon" aria-hidden="true">-&gt;</span>
+            Email
+          </a>
         </div>
-        <div class="format-item reveal">
-          <div class="idx">Live online</div>
-          <h3>Zoom, anywhere</h3>
-          <p>Join the identical class from Vancouver, Calgary, Montreal or overseas, with studio‑mic audio and full participation in breakout rooms and mock stations.</p>
-        </div>
-        <div class="format-item reveal">
-          <div class="idx">After class</div>
-          <h3>Recordings &amp; QBank</h3>
-          <p>Every lecture is recorded, and the Sure Success Question Bank® stays open through your course access period for self‑paced review.</p>
-        </div>
-      </div>
+      </section>
+    </main>
 
-      <div class="schedule reveal">
-        <div class="item"><b>Saturday</b>12:30 – 3:30 PM EST · in‑person &amp; Zoom</div>
-        <div class="item"><b>Monday</b>6:00 – 8:00 PM EST · Zoom</div>
-        <div class="item"><b>Wednesday</b>9:00 – 11:00 AM EST · in‑person &amp; Zoom</div>
-        <div class="item"><b>Trial class</b>Free, no obligation — ask us to book yours</div>
-      </div>
-    </div>
-  </section>
+    <aside class="metrics" aria-label="Interaction metrics">
+      <div>Cursor X: <strong id="metricX">0</strong></div>
+      <div>Cursor Y: <strong id="metricY">0</strong></div>
+      <div>Scroll: <strong id="metricScroll">0%</strong></div>
+      <div>Time: <strong id="metricTime">0.0s</strong></div>
+    </aside>
 
-  <!-- REVIEWS -->
-  <section id="reviews">
-    <div class="wrap">
-      <div class="review-strip reveal">
-        <div class="rating-badge">4.8</div>
-        <div>
-          <div class="stars">★★★★★</div>
-          <div class="eyebrow" style="margin-top:6px;">82 Google reviews</div>
-        </div>
-      </div>
+    <footer class="shell footer">
+      <span>Cube//Systems (c) 2026</span>
+      <span>Designed for high contrast product interfaces</span>
+    </footer>
 
-      <div class="review-grid reveal">
-        <div class="review">
-          <div class="stars">★★★★★</div>
-          <p>"A special thanks to my mentor, whose guidance, clear explanations and constant encouragement carried me through the whole preparation."</p>
-          <div class="who"><span>Cheshta Chugh</span><span>Google review</span></div>
-        </div>
-        <div class="review">
-          <div class="stars">★★★★★</div>
-          <p>"A well‑structured institution for medical exam prep — the faculty is dedicated, knowledgeable, and always willing to help students succeed."</p>
-          <div class="who"><span>Sabeen Riaz</span><span>Google review</span></div>
-        </div>
-        <div class="review">
-          <div class="stars">★★★★★</div>
-          <p>"The team has been genuinely supportive of IMGs navigating the Canadian system, helping map out a pathway that fits each person's background."</p>
-          <div class="who"><span>Dr. Kashif Khan</span><span>Local Guide · Google review</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <script>
+      const cursor = document.getElementById("cursor");
+      const metricX = document.getElementById("metricX");
+      const metricY = document.getElementById("metricY");
+      const metricScroll = document.getElementById("metricScroll");
+      const metricTime = document.getElementById("metricTime");
+      const progressBar = document.getElementById("progressBar");
+      const clock = document.getElementById("clock");
+      const startedAt = performance.now();
 
-  <!-- FAQ -->
-  <section id="faq" class="tight" style="background:var(--paper-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div>
-          <div class="eyebrow">Questions</div>
-          <h2>Before you book your trial class</h2>
-        </div>
-      </div>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:36px 48px;" class="reveal">
-        <div>
-          <h3 style="font-size:18px; color:var(--ink); font-weight:600; font-family:'IBM Plex Sans',sans-serif;">Are classes online or in person?</h3>
-          <p style="color:var(--text-muted); font-size:14.5px; line-height:1.6; margin-top:8px;">Every class is simulcast live — attend in person at our Mississauga campus, or join the same session via Zoom from anywhere in Canada or overseas.</p>
-        </div>
-        <div>
-          <h3 style="font-size:18px; color:var(--ink); font-weight:600; font-family:'IBM Plex Sans',sans-serif;">Can I try a class first?</h3>
-          <p style="color:var(--text-muted); font-size:14.5px; line-height:1.6; margin-top:8px;">Yes — we offer a free trial class for MCCQE1 or NAC‑OSCE, with no obligation to enrol afterward.</p>
-        </div>
-        <div>
-          <h3 style="font-size:18px; color:var(--ink); font-weight:600; font-family:'IBM Plex Sans',sans-serif;">Do I need to start on a set date?</h3>
-          <p style="color:var(--text-muted); font-size:14.5px; line-height:1.6; margin-top:8px;">No. Topics rotate continuously, so you can join at any point and keep attending until your exam date.</p>
-        </div>
-        <div>
-          <h3 style="font-size:18px; color:var(--ink); font-weight:600; font-family:'IBM Plex Sans',sans-serif;">Is the MCCQE1 course up to date?</h3>
-          <p style="color:var(--text-muted); font-size:14.5px; line-height:1.6; margin-top:8px;">Yes. Since April 2025 the Clinical Decision Making component is no longer part of the exam, and our materials reflect the current format.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+      const updateScroll = () => {
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = maxScroll > 0 ? window.scrollY / maxScroll : 0;
+        const percent = Math.round(progress * 100);
+        progressBar.style.width = `${percent}%`;
+        metricScroll.textContent = `${percent}%`;
+      };
 
-  <!-- CTA -->
-  <section class="cta-band" id="contact">
-    <div class="wrap reveal">
-      <div class="eyebrow" style="justify-content:center; color:rgba(255,255,255,0.85);"><span style="display:none;"></span></div>
-      <h2>Book your free trial class — no obligation, no pressure.</h2>
-      <p>Call the admissions office, or stop by the Mississauga campus. We'll walk you through which track fits your exam timeline.</p>
-      <div class="cta-row">
-        <a href="tel:+18883419392" class="btn btn-primary">Call +1 888‑341‑9392</a>
-        <a href="https://suresuccess.ca/contact-us" target="_blank" rel="noopener" class="btn btn-ghost-light">Visit suresuccess.ca</a>
-      </div>
-    </div>
-  </section>
+      const updateClock = () => {
+        const now = new Date();
+        clock.textContent = now.toLocaleTimeString([], {
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit"
+        });
+        metricTime.textContent = `${((performance.now() - startedAt) / 1000).toFixed(1)}s`;
+      };
 
-</main>
+      window.addEventListener("mousemove", (event) => {
+        cursor.style.left = `${event.clientX}px`;
+        cursor.style.top = `${event.clientY}px`;
+        metricX.textContent = Math.round(event.clientX);
+        metricY.textContent = Math.round(event.clientY);
+      });
 
-<footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot-brand">
-        <a href="#top" class="logo">
-          <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#C99A3B" stroke-width="2"><path d="M2 12h5l2-7 4 14 2-7h7"/></svg></span>
-          Sure Success Canada
-        </a>
-        <p>Physician‑led exam preparation for International Medical Graduates, in Mississauga and live online across Canada.</p>
-      </div>
-      <div>
-        <h4>Courses</h4>
-        <ul>
-          <li><a href="#courses">MCCQE1 Preparation</a></li>
-          <li><a href="#courses">NAC‑OSCE Preparation</a></li>
-          <li><a href="#courses">MCCQE2 Preparation</a></li>
-          <li><a href="#courses">EACMC‑1 (Français)</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Campus</h4>
-        <ul>
-          <li>120 Matheson Blvd E, Unit 201</li>
-          <li>Mississauga, ON L4Z 1Y6</li>
-          <li><a href="https://www.google.com/maps/search/?api=1&query=120+Matheson+Blvd+E+Unit+201+Mississauga+ON" target="_blank" rel="noopener">Get directions →</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Hours</h4>
-        <ul>
-          <li class="mono" style="font-size:13px;">Mon · 9:00 AM – 5:00 PM</li>
-          <li class="mono" style="font-size:13px;">Tue / Wed / Thu · 9:00 AM – 9:00 PM</li>
-          <li class="mono" style="font-size:13px;">Fri · 9:00 AM – 5:00 PM</li>
-          <li class="mono" style="font-size:13px;">Sat · 9:00 AM – 3:00 PM</li>
-          <li class="mono" style="font-size:13px;">Sun · Closed</li>
-        </ul>
-      </div>
-    </div>
-    <div class="foot-bottom">
-      <span>© 2026 Sure Success Canada. Independent exam‑preparation coaching, not affiliated with the Medical Council of Canada.</span>
-      <span>+1 888‑341‑9392 · suresuccess.ca</span>
-    </div>
-  </div>
-</footer>
+      document.querySelectorAll("a, button").forEach((item) => {
+        item.addEventListener("mouseenter", () => cursor.classList.add("is-active"));
+        item.addEventListener("mouseleave", () => cursor.classList.remove("is-active"));
+      });
 
-<script>
-  // mobile nav
-  const burger = document.getElementById('burgerBtn');
-  const panel = document.getElementById('mobilePanel');
-  burger.addEventListener('click', () => panel.classList.toggle('open'));
-  panel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => panel.classList.remove('open')));
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.14 }
+      );
 
-  // scroll reveal
-  const revealEls = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, {threshold:0.12});
-  revealEls.forEach(el => io.observe(el));
-</script>
-
-</body>
+      document.querySelectorAll(".reveal").forEach((item) => observer.observe(item));
+      window.addEventListener("scroll", updateScroll, { passive: true });
+      window.addEventListener("resize", updateScroll);
+      updateScroll();
+      updateClock();
+      setInterval(updateClock, 120);
+    </script>
+  </body>
 </html>
